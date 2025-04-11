@@ -25,7 +25,7 @@ void selection_sort(int arr[SIZE])
     int sel_pos, pos;
     int iterations = 0, comparisons = 0;
 
-    for(sel_pos = 0; sel_pos < SIZE -1; sel_pos++)
+    for(sel_pos = 0; sel_pos < SIZE - 1; sel_pos++)
     {
         iterations++;
 
