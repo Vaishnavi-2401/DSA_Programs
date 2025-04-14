@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define SIZE 5
 
 void merge(int arr[], int left, int mid, int right) 
 {
@@ -37,7 +38,8 @@ void merge(int arr[], int left, int mid, int right)
 
 void merge_sort(int arr[], int left, int right) 
 {
-    if (left < right) {
+    if (left < right) 
+    {
         int mid = (left + right) / 2;
 
         merge_sort(arr, left, mid);       
@@ -46,11 +48,11 @@ void merge_sort(int arr[], int left, int right)
     }
 }
 
-void display(int arr[], int size) 
+void display(int arr[SIZE])
 {
-    for (int i = 0; i < size; i++)
+    for(int i = 0; i < SIZE; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%4d", arr[i]);
     }
 
     printf("\n");
@@ -58,22 +60,17 @@ void display(int arr[], int size)
 
 int main() 
 {
-    int arr[100], n;
+    int arr[SIZE] = {50, 10, 20, 40, 30};
+    int left = 0;
+    int right = SIZE - 1;
 
-    printf("Enter Number of Elements : ");
-    scanf("%d", &n);
+    printf("Before Sort : ");
+    display(arr);
 
-    printf("Enter %d elements : \n", n);
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
+    merge_sort(arr, left, right);
 
-    printf("Original array:\n");
-    display(arr, n);
-
-    merge_sort(arr, 0, n - 1);
-
-    printf("Sorted array:\n");
-    display(arr, n);
+    printf("After Sort : ");
+    display(arr);
 
     return 0;
 }
