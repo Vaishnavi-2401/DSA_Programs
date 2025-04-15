@@ -1,6 +1,10 @@
 #include <stdio.h>
 #define SIZE 5
 
+void merge(int arr[], int left, int mid, int right);
+void merge_sort(int arr[], int left, int right);
+void display(int arr[SIZE]);
+
 void merge(int arr[], int left, int mid, int right) 
 {
     int i = left;      
@@ -8,9 +12,9 @@ void merge(int arr[], int left, int mid, int right)
     int k = 0;         
     int temp[100];     
 
-    while (i <= mid && j <= right) 
+    while(i <= mid && j <= right) 
     {
-        if (arr[i] < arr[j]) 
+        if(arr[i] < arr[j]) 
         {
             temp[k++] = arr[i++];
         } 
@@ -20,17 +24,17 @@ void merge(int arr[], int left, int mid, int right)
         }
     }
 
-    while (i <= mid) 
+    while(i <= mid) 
     {
         temp[k++] = arr[i++];
     }
 
-    while (j <= right) 
+    while(j <= right) 
     {
         temp[k++] = arr[j++];
     }
 
-    for (i = left, k = 0; i <= right; i++, k++) 
+    for(i = left, k = 0; i <= right; i++, k++) 
     {
         arr[i] = temp[k];
     }
@@ -38,7 +42,7 @@ void merge(int arr[], int left, int mid, int right)
 
 void merge_sort(int arr[], int left, int right) 
 {
-    if (left < right) 
+    if(left < right) 
     {
         int mid = (left + right) / 2;
 
