@@ -18,15 +18,31 @@ struct Node* CreateNode(int new_data)
     return new_node;
 }
 
+//Function to print the linked list
+void Print_list(struct Node * head) 
+{
+    struct Node * current = head;
+
+    while(current != NULL) 
+    {
+        printf("%d ", current -> data);
+
+        current = current -> next;
+    }
+    printf("\n");
+}
+
 int main()
 {
-    struct Node* head = CreateNode(10);
+    struct Node * head = CreateNode(10);
     head -> next = CreateNode(20);
     head -> next -> next = CreateNode(30);
 
-    struct Node* temp = head;
+    struct Node * current = head;
 
     printf("Singly Linked List : ");
+
+    Print_list(head);
 
     return 0;
 }
