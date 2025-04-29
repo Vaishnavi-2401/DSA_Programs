@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include <stdlib.h>
+#include<stdlib.h>
 
 struct Node
 {
@@ -7,6 +7,7 @@ struct Node
     struct Node* next;
 };
 
+//Function to create a new node
 struct Node* CreateNode(int new_data)
 {
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
@@ -26,14 +27,6 @@ int main()
     struct Node* temp = head;
 
     printf("Singly Linked List : ");
-
-    while(temp != NULL)
-    {
-        printf("%d -> ", temp -> data);
-
-        temp = temp -> next;
-    }
-    printf("NULL\n");
 
     return 0;
 }
