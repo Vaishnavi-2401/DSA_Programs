@@ -18,36 +18,24 @@ struct Node* CreateNode(int new_data)
     return new_node;
 }
 
-//Function to insert a node at the specific position
-struct Node * insert(struct Node * head, int data, int pos) 
+//Function to insert a node at the end
+struct Node* insert(struct Node* head, int key) 
 {
-    struct Node * new_node = CreateNode(data);
+    struct Node* new_node = CreateNode(key);
 
-    if(pos == 1) 
+    if(head == NULL) 
     {
-        new_node -> next = head;
-
         return new_node;
     }
 
-    struct Node * current = head;
+    struct Node* temp = head;
 
-    for(int i = 1; i < pos - 1 && current != NULL; i++) 
+    while(temp -> next != NULL) 
     {
-        current = current -> next;
+        temp = temp -> next;
     }
 
-    if(current == NULL) 
-    {
-        printf("Invalid Position!\n");
-
-        free(new_node);
-
-        return head;
-    }
-
-    new_node -> next = current -> next;
-    current -> next = new_node;
+    temp -> next = new_node;
 
     return head;
 }
@@ -66,16 +54,15 @@ void print_list(struct Node * head)
     printf("NULL\n");
 }
 
-
 int main()
 {
     struct Node* head = NULL;
 
     printf("After Inserting Nodes : ");
 
-    head = insert(head, 10, 1);
-    head = insert(head, 20, 2);
-    head = insert(head, 15, 2);
+    head = insert(head, 3);
+    head = insert(head, 2);
+    head = insert(head, 1);
 
     print_list(head);
 
