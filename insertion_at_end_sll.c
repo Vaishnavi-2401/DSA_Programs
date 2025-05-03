@@ -8,9 +8,9 @@ struct Node
 };
 
 //Function to create a new node
-struct Node* CreateNode(int new_data)
+struct Node * CreateNode(int new_data)
 {
-    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    struct Node * new_node = (struct Node*)malloc(sizeof(struct Node));
 
     new_node -> data = new_data;
     new_node -> next = NULL;
@@ -19,16 +19,16 @@ struct Node* CreateNode(int new_data)
 }
 
 //Function to insert a node at the end
-struct Node* insert(struct Node* head, int key) 
+struct Node * insert(struct Node * head, int key) 
 {
-    struct Node* new_node = CreateNode(key);
+    struct Node * new_node = CreateNode(key);
 
     if(head == NULL) 
     {
         return new_node;
     }
 
-    struct Node* temp = head;
+    struct Node * temp = head;
 
     while(temp -> next != NULL) 
     {
@@ -56,7 +56,7 @@ void print_list(struct Node * head)
 
 int main()
 {
-    struct Node* head = NULL;
+    struct Node * head = NULL;
 
     printf("After Inserting Nodes : ");
 

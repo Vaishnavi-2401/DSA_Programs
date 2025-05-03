@@ -8,9 +8,9 @@ struct Node
 };
 
 //Function to create a new node
-struct Node* CreateNode(int new_data)
+struct Node * CreateNode(int new_data)
 {
-    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    struct Node * new_node = (struct Node*)malloc(sizeof(struct Node));
 
     new_node -> data = new_data;
     new_node -> next = NULL;
@@ -45,7 +45,7 @@ void print_list(struct Node * head)
 
 int main()
 {
-    struct Node* head = NULL;
+    struct Node * head = NULL;
     
     printf("After Inserting Nodes : ");
 
@@ -54,5 +54,7 @@ int main()
     head = insert(head, 1);
 
     print_list(head);
+
+    return 0;
 
 }
