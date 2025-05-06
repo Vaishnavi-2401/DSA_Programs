@@ -63,6 +63,7 @@ void print_list(struct Node * head)
 
         current = current -> next;
     }
+    
     printf("NULL\n");
 }
 

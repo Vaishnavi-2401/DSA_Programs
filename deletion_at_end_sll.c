@@ -67,6 +67,7 @@ struct Node * delete(struct Node* head)
 void print_list(struct Node * head)
 {
     struct Node * current = head;
+    
     while(current != NULL)
     {
         printf("%d -> ", current -> data);

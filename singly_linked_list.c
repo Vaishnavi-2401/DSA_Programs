@@ -29,6 +29,7 @@ void Print_list(struct Node * head)
 
         current = current -> next;
     }
+    
     printf("\n");
 }
 
