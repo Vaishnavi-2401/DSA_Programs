@@ -21,7 +21,7 @@ struct Node * CreateNode(int new_data)
 }
 
 //Function to print the list forward
-void Print_forward(struct Node * head) 
+void print_forward(struct Node * head) 
 {
     struct Node * current = head;
 
@@ -38,7 +38,7 @@ void Print_forward(struct Node * head)
 }
 
 //Function to print the list backward
-void Print_backward(struct Node * tail) 
+void print_backward(struct Node * tail) 
 {
     struct Node * current = tail;
 
@@ -65,8 +65,8 @@ int main()
     second -> next = third;
     third -> prev = second;
 
-    Print_forward(head);
-    Print_backward(third);
+    print_forward(head);
+    print_backward(third);
 
     return 0;
 }
