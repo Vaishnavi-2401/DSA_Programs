@@ -29,12 +29,12 @@ void print_forward(struct Node * head)
 
     while(current != NULL) 
     {
-        printf("%d ", current -> data);
+        printf("%d -> ", current -> data);
 
         current = current -> next;
     }
 
-    printf("\n");
+    printf("NULL\n");
 }
 
 //Function to print the list backward
@@ -46,12 +46,12 @@ void print_backward(struct Node * tail)
 
     while(current != NULL) 
     {
-        printf("%d ", current -> data);
+        printf("%d <- ", current -> data);
 
         current = current -> prev;
     }
 
-    printf("\n");
+    printf("NULL\n");
 }
 
 int main() 
