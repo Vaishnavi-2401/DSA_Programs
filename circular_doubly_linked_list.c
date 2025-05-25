@@ -40,7 +40,8 @@ void print_forward(struct Node * head)
 
         current = current -> next;
 
-    }while(current != head);
+    }
+    while(current != head);
 
     printf("(Back to Head)\n");
 }
@@ -58,13 +59,15 @@ void print_backward(struct Node * tail)
     struct Node * current = tail;
 
     printf("Backward List : ");
+    
     do 
     {
         printf("%d <- ", current -> data);
 
         current = current -> prev;
 
-    }while(current != tail);
+    }
+    while(current != tail);
 
     printf("(Back to Tail)\n");
 }

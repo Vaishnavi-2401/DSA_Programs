@@ -93,7 +93,8 @@ void print_list(struct Node * head)
 
         current = current -> next;
 
-    }while(current != head);
+    }
+    while(current != head);
 
     printf("(back to head)\n");
 }

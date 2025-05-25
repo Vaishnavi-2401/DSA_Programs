@@ -75,7 +75,6 @@ struct Node * delete(struct Node * head, int pos)
             head -> prev = NULL;
         }
     }
-
     else
     {
         if(temp -> prev != NULL)

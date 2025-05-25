@@ -56,7 +56,6 @@ struct Node * delete(struct Node * head)
     {
         temp -> prev -> next = NULL;
     }
-
     else
     {
         head = NULL;

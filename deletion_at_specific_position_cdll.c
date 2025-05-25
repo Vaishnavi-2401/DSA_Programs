@@ -102,7 +102,8 @@ struct Node * delete(struct Node * head, int pos)
 
         count++;
 
-    }while(current != head);
+    }
+    while(current != head);
 
     return head;
 }
@@ -123,7 +124,8 @@ void print_list(struct Node * head)
 
         current = current -> next;
 
-    }while(current != head);
+    }
+    while(current != head);
 
     printf("(back to head)\n");
 }

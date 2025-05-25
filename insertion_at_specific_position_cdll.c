@@ -84,7 +84,8 @@ void print_forward(struct Node * head)
 
         current = current -> next;
 
-    }while(current != head);
+    }
+    while(current != head);
 
     printf("(back to head)\n");
 }
@@ -109,7 +110,8 @@ void print_backward(struct Node * tail)
 
         current = current -> prev;
 
-    }while(current != tail);
+    }
+    while(current != tail);
 
     printf("(back to tail)\n");
 }
